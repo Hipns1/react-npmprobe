@@ -1,0 +1,40 @@
+.button {
+    border: none;
+    width: auto;
+    height: 40px;
+    padding: 1rem;
+    color: blue;
+    font-size: 18px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.color-primary {
+    background-color: aquamarine;
+    color: black;
+}
+
+.color-secondary {
+    background-color: red;
+    color: white;
+}
+
+.color-dark {
+    background-color: black;
+    border: none;
+    color: white;
+}
+
+.size-sm {
+    min-width: 100px;
+}
+
+.size-lg {
+    min-width: 150px;
+}
+
+.size-xlg {
+    min-width: 200px;
+}
