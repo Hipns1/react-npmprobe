@@ -1,0 +1,24 @@
+span {
+    text-align: center;
+    font-size: 1.5rem;
+    width: 3rem;
+    height: 1.5rem;
+    border-radius: 1rem;
+    padding: 0.3rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.error {
+    background-color: #ff005c;
+}
+
+.warning {
+    background-color: #ffa100;
+}
+
+.correct {
+    background-color: #15be77;
+}
