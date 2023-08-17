@@ -4,17 +4,15 @@ import { options } from "./cosntants";
 import classNames from "classnames";
 import "./Button.css";
 
-interface ButtonProps {
+/* interface ButtonProps {
   text: string;
   color?: string;
   size?: string;
-}
+} */
 
-export const Button = ({
-  text = "Button",
-  color = "primary",
-  size = "sm",
-}: ButtonProps) => {
+export const Button = (
+  { text = "Button", color = "primary", size = "sm" } /* : ButtonProps */
+) => {
   return (
     <button
       className={classNames("button", {
