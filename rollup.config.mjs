@@ -31,7 +31,11 @@ export default [{
         peerDepsExternal(),
         resolve(),
         commonjs(),
-        typescript(),
+        typescript({
+            declaration: true, // Generate .d.ts files
+            declarationDir: "lib", // Output directory for .d.ts files
+            rootDir: "src", // Source directory
+        }),
         postcss({
             extensions: ['.css']
         })
