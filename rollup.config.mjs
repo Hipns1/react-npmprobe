@@ -4,7 +4,7 @@ import commonjs from "@rollup/plugin-commonjs";
 import typescript from "@rollup/plugin-typescript";
 import postcss from "rollup-plugin-postcss";
 import dts from "rollup-plugin-dts";
-
+import babel from "@rollup/plugin-babel";
 // This is required to read package.json file when
 // using Native ES modules in Node.js
 // https://rollupjs.org/command-line-interface/#importing-package-json
@@ -14,7 +14,8 @@ const packageJson = requireFile('./package.json');
 
 
 export default [{
-    input: "src/index.ts",
+    extensions: ['.js', '.jsx', '.ts', '.tsx'],
+    input: "src/index.js",
     output: [
         {
             file: packageJson.main,
@@ -31,10 +32,10 @@ export default [{
         peerDepsExternal(),
         resolve(),
         commonjs(),
-        typescript({
-            declaration: true, // Generate .d.ts files
-            declarationDir: "lib", // Output directory for .d.ts files
-            rootDir: "src", // Source directory
+        babel({
+            babelHelpers: 'bundled', // Puede ser 'bundled', 'runtime', 'external', o false
+            exclude: 'node_modules/**', // Excluye la carpeta 'node_modules'
+            extensions: ['.js', '.jsx', '.ts', '.tsx'], // Maneja archivos JS y JSX
         }),
         postcss({
             extensions: ['.css']
