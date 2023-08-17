@@ -14,7 +14,6 @@ const packageJson = requireFile('./package.json');
 
 
 export default [{
-    extensions: ['.js', '.jsx', '.ts', '.tsx'],
     input: "src/index.js",
     output: [
         {
