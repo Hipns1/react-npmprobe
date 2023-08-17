@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { AiOutlineCheck, AiOutlineWarning } from "react-icons/ai";
 import "./Pill.css";
 
-export const Pill = ({ status }) => {
+export const Pill = ({ status = "correct" }) => {
   return (
     <span className={status}>
       {status === "correct" && <AiOutlineCheck />}
