@@ -5,9 +5,10 @@ import classNames from "classnames";
 import "./Button.css";
 
 export const Button = (
-  { text = "Button", color = "primary", size = "sm" }) => {
+  { text = "Button", color = "primary", size = "sm", onClickFn = null }) => {
   return (
     <button
+      onClick={() => onClickFn()}
       className={classNames("button", {
         [`color-${color}`]: color,
         [`size-${size}`]: size,
@@ -22,6 +23,7 @@ Button.propTypes = {
   text: PropTypes.string,
   color: PropTypes.oneOf(options.colors),
   size: PropTypes.oneOf(options.sizes),
+  onClickFn: PropTypes.func
 };
 
 export default Button;

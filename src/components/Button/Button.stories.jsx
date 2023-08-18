@@ -35,6 +35,9 @@ export default {
       control: "select",
       options: options.sizes,
     },
+    onClickFn: {
+      description: "onClick function",
+    }
   },
 };
 
