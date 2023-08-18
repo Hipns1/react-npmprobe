@@ -1,6 +1,6 @@
 {
   "name": "jdpf-system-design",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "lib/index.js",
   "module": "lib/index.esm.js",
   "types": "lib/index.d.js",
