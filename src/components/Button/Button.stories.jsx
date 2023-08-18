@@ -10,7 +10,8 @@ export default {
     text: "Button",
     color: "primary",
     size: "sm",
-    typeSubmit: false
+    typeSubmit: false,
+    disabled: false
   },
   argTypes: {
     text: {
@@ -41,6 +42,10 @@ export default {
     },
     typeSubmit: {
       description: "typeSubmit={true}, type = 'submit' | typeSubmit={false}, type = 'button'",
+      control: "boolean"
+    },
+    disabled: {
+      description: "disabled state",
       control: "boolean"
     }
   },

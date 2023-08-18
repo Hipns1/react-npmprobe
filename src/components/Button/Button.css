@@ -3,12 +3,13 @@
     width: auto;
     height: 40px;
     padding: 1rem;
-    color: blue;
     font-size: 18px;
     border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+    font-weight: bold;
 }
 
 .color-primary {
@@ -37,4 +38,10 @@
 
 .size-xlg {
     min-width: 200px;
+}
+
+.disabled {
+    background-color: gray;
+    cursor: auto;
+    color: white;
 }
