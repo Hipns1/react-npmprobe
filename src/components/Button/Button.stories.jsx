@@ -10,6 +10,7 @@ export default {
     text: "Button",
     color: "primary",
     size: "sm",
+    typeSubmit: false
   },
   argTypes: {
     text: {
@@ -37,6 +38,10 @@ export default {
     },
     onClickFn: {
       description: "onClick function",
+    },
+    typeSubmit: {
+      description: "typeSubmit={true}, type = 'submit' | typeSubmit={false}, type = 'button'",
+      control: "boolean"
     }
   },
 };
