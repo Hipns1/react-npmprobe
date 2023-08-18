@@ -21,11 +21,11 @@ export const Button = (
 };
 
 Button.propTypes = {
-  text: PropTypes.string,
-  typeSubmit: PropTypes.boolean,
+  text: PropTypes.string.isRequired,
+  typeSubmit: PropTypes.bool.isRequired,
   color: PropTypes.oneOf(options.colors),
   size: PropTypes.oneOf(options.sizes),
-  onClickFn: PropTypes.func
+  onClickFn: PropTypes.func.isRequired
 };
 
 export default Button;
